@@ -24,6 +24,9 @@ class Request_http implements request{
 		return self::getAllParameters()[2];
 	}
 	
+	public function getParam(){
+		return self::getAllParameters()[3];
+	}
 	
 } 
 

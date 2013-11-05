@@ -25,13 +25,19 @@
 				//die('<span style="color: red">Action not found!!</span>');
 			}
 			
-			$this->{$actionName}();
+			$this->{$actionName}( );
 			
 		}
 		
-		public function showAction(){
+	
+		
+		
+		public function showPostAction(  ){
 			
-			$this->renderView();
+			$model = new BlogModel();
+			$result = $model->getPostById( $this->request->getParam() );
+			
+			$this->renderView( $result );
 		}
 		
 		
